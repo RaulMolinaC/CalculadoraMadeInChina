@@ -2,7 +2,7 @@
     {
         public static void PrintMainMenu()
         {
-            System.Console.Clear();
+           
             System.Console.WriteLine(" Calculadora Made in China ");
             System.Console.WriteLine(" 1) Sumar una serie de números ");
             System.Console.WriteLine(" 2) Restar una serie de números ");
