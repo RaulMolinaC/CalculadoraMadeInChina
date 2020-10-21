@@ -20,16 +20,16 @@ namespace CalculadoraMadeInChina
                 else if (option == -1)
                 {
                     System.Console.Clear();
-                    System.Console.WriteLine(" Opción no vcalida");
+                    System.Console.WriteLine(" Opción no valida");
                 }
                 else
                 {
-                    if (option < 0   option > 7)
+                    if (option < 0    option > 7)
 
                 }
                 
             }
-            System.Console.WriteLine("Fin de l menú pricipal");
+            System.Console.WriteLine("Fin del menú pricipal");
         }
 
         static void Main(string[] args)
