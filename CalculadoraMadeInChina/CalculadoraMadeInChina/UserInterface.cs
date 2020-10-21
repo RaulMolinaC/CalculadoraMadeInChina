@@ -14,6 +14,14 @@
             System.Console.WriteLine(" 0) Salir de la aplicación ");
 
         }
+     
+        public static void PrintAddMenu()
+         {
+            System.Console.WriteLine(" Suma de números ");
+
+
+          }
+                       
 
         public static int ReadOption()
         {
@@ -38,8 +46,6 @@
             {
                 //Cerrar conexión con la base de datos
             }
-
-
 
             //int result = System.Int32.Parse(option);
 
