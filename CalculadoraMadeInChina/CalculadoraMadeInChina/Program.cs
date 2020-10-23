@@ -11,20 +11,17 @@ namespace CalculadoraMadeInChina
             while (true)
             {
                 UserInterface.PrintAddMenu();
+                int number1 = ManageUtils.ReadInteger("Introduzca el primer númro: ");
+                int number2 = ManageUtils.ReadInteger("Introduzca el segundo númro: ");
+                int result = number1 + number2;
+                System.Console.WriteLine("El resultado es: " + result);
 
             }
 
         }
 
         public static void ManageMainMenu()
-        {
-            while (true)
-            {
-                UserInterface.PrintMainMenu();
-            }
-
-        }
-
+                
         {
             bool finished = false;
 
@@ -41,7 +38,7 @@ namespace CalculadoraMadeInChina
                         System.Console.WriteLine(" Opción no valida");
                         break;
                     case 1:
-                        ManageAddMenu()
+                        ManageAddMenu();
                             break;
                     case 2:
                     case 3:
@@ -54,14 +51,7 @@ namespace CalculadoraMadeInChina
                         finished = true;
                         break;
 
-                }
-
-               
-                
-
-
-
-
+                }               
 
 
             }
