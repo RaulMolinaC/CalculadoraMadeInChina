@@ -1,5 +1,9 @@
 ﻿    class UserInterface
     {
+
+        
+
+
         public static void PrintMainMenu()
         {
            
@@ -15,12 +19,19 @@
 
         }
      
-        public static void PrintAddMenu()
+        public static void PrintAddHeader()
          {
             System.Console.WriteLine(" Suma de números ");
 
 
          }
+
+        public static void PrintAddSubmenu()
+        {
+            System.Console.WriteLine("0) Salir al menú principal");
+            System.Console.WriteLine("1) Sumar otro número");
+            System.Console.WriteLine("2) Comenzar nueva suma");
+        }
                        
 
         public static int ReadOption()
