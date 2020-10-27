@@ -5,7 +5,7 @@ namespace CalculadoraMadeInChina
     class Program
     {
 
-        public static void ManageAddSubmenu(int Accumuled)
+        public static int ManageAddSubmenu(int Accumuled)
         {
             while (true)
             {
@@ -14,17 +14,15 @@ namespace CalculadoraMadeInChina
                 int number = ManageUtils.ReadInteger("Introduce otro número: ");
                 Accumuled += number;
                 System.Console.WriteLine("Llevas acumulado: " + Accumuled);
-                UserInterface.PrintAddHeader();
-                int option = UserInterface.ReadOption();
+                UserInterface.PrintAddSubmenu();
+                int option = UserInterface.ReadMenuOption(0, 2);
                 switch (option)
                 {
                     case 0:
-                        break;
-                    case 1:
-                        break;
+                        return 0;                                                            
                     case 2:
-                        break;
-
+                        return 2;
+                       
                 }
             }
 
@@ -42,7 +40,7 @@ namespace CalculadoraMadeInChina
                 int result = number1 + number2;
                 System.Console.WriteLine("El resultado es: " + result);
                 UserInterface.PrintAddSubmenu();
-                int option = UserInterface.ReadOption();
+                int option = UserInterface.ReadMenuOption();
                 if (option == 0)
                 {
                     return;    
@@ -53,7 +51,11 @@ namespace CalculadoraMadeInChina
                 }
                 else if (option == 1)
                 {
-                    ManageAddSubmenu(result);
+                   int submenu_option = ManageAddSubmenu(result);
+                    if (submenu_option == 0)
+                        return;
+
+
                 }
 
 
@@ -70,7 +72,7 @@ namespace CalculadoraMadeInChina
             while ( finished == false )
             {
                 UserInterface.PrintMainMenu();
-                int option = UserInterface.ReadOption();
+                int option = UserInterface.ReadMenuOption();
 
                 switch(option)
                 {

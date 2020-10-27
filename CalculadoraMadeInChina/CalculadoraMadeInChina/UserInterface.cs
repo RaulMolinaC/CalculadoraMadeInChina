@@ -6,8 +6,11 @@
 
         public static void PrintMainMenu()
         {
-           
+            System.Console.BackgroundColor = System.ConsoleColor.DarkBlue;
+            System.Console.ForegroundColor = System.ConsoleColor.White;
             System.Console.WriteLine(" Calculadora Made in China ");
+            System.Console.WriteLine(" ----------------------------------- ");
+            System.Console.ResetColor();
             System.Console.WriteLine(" 1) Sumar una serie de números ");
             System.Console.WriteLine(" 2) Restar una serie de números ");
             System.Console.WriteLine(" 3) Multiplicar ");
@@ -34,7 +37,7 @@
         }
                        
 
-        public static int ReadOption()
+        public static int ReadMenuOption()
         {
             string option = System.Console.ReadLine();
             
@@ -60,6 +63,19 @@
 
             //int result = System.Int32.Parse(option);
 
+        }
+
+       public static int ReadMenuOption(int MinMenuOption, int MaxMenuOption)
+        { 
+            while (true)
+            {
+                int option = ReadMenuOption();
+                if (option >= MinMenuOption && option <= MaxMenuOption) 
+                   return option;
+                else
+                    System.Console.WriteLine("Opción duera de rango ");
+            }   
+    
         }
 
     }
