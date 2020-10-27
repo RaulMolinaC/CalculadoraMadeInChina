@@ -36,7 +36,13 @@
             System.Console.WriteLine("1) Sumar otro número");
             System.Console.WriteLine("2) Comenzar nueva suma");
         }
-                       
+
+        public static void PrintSubSubmenu()
+        {
+            System.Console.WriteLine("0) Salir al menú principal");
+            System.Console.WriteLine("1) Restar otro número");
+            System.Console.WriteLine("2) Comenzar nueva resta");
+        }
 
         public static int ReadMenuOption()
         {

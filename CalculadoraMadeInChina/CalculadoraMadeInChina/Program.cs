@@ -28,6 +28,29 @@ namespace CalculadoraMadeInChina
 
         }
 
+        public static int ManageSubSubmenu(int Accumuled)
+        {
+            while (true)
+            {
+                UserInterface.PrintSubHeader();
+                System.Console.WriteLine("Llevas acumulado: " + Accumuled);
+                int number = ManageUtils.ReadInteger("Introduce otro número: ");
+                Accumuled -= number;
+                System.Console.WriteLine("Llevas acumulado: " + Accumuled);
+                UserInterface.PrintSubSubmenu();
+                int option = UserInterface.ReadMenuOption(0, 2);
+                switch (option)
+                {
+                    case 0:
+                        return 0;
+                    case 2:
+                        return 2;
+
+                }
+            }
+
+        }
+
 
         public static void ManageAddMenu()
         {
@@ -55,10 +78,7 @@ namespace CalculadoraMadeInChina
                     if (submenu_option == 0)
                         return;
 
-
                 }
-
-
 
             }
 
@@ -90,7 +110,6 @@ namespace CalculadoraMadeInChina
                     if (submenu_option == 0)
                         return;
 
-
                 }
 
 
@@ -121,6 +140,8 @@ namespace CalculadoraMadeInChina
                         ManageAddMenu();
                             break;
                     case 2:
+                        ManageSubMenu();
+                        break;
                     case 3:
                     case 4:
                     case 5:
