@@ -64,6 +64,42 @@ namespace CalculadoraMadeInChina
 
         }
 
+        public static void ManageSubMenu()
+        {
+
+            while (true)
+            {
+                UserInterface.PrintSubHeader();
+                int number1 = ManageUtils.ReadInteger("Introduzca el primer númro: ");
+                int number2 = ManageUtils.ReadInteger("Introduzca el segundo númro: ");
+                int result = number1 - number2;
+                System.Console.WriteLine("El resultado es: " + result);
+                UserInterface.PrintSubSubmenu();
+                int option = UserInterface.ReadMenuOption();
+                if (option == 0)
+                {
+                    return;
+                }
+                else if (option == 2)
+                {
+                    System.Console.Clear();
+                }
+                else if (option == 1)
+                {
+                    int submenu_option = ManageSubSubmenu(result);
+                    if (submenu_option == 0)
+                        return;
+
+
+                }
+
+
+
+            }
+
+        }
+
+
         public static void ManageMainMenu()
                 
         {

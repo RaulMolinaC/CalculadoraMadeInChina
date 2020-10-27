@@ -26,8 +26,13 @@
          {
             System.Console.WriteLine(" Suma de números ");
 
-
          }
+
+         public static void PrintSubHeader()
+          {
+            System.Console.WriteLine(" Resta de números ");
+
+          }
 
         public static void PrintAddSubmenu()
         {
