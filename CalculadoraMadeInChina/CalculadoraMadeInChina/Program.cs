@@ -19,8 +19,10 @@ namespace CalculadoraMadeInChina
                 switch (option)
                 {
                     case 0:
+                        System.Console.Clear();
                         return 0;                                                            
                     case 2:
+                        System.Console.Clear();
                         return 2;
                        
                 }
@@ -42,8 +44,10 @@ namespace CalculadoraMadeInChina
                 switch (option)
                 {
                     case 0:
+                        System.Console.Clear();
                         return 0;
                     case 2:
+                        System.Console.Clear();
                         return 2;
 
                 }
@@ -66,6 +70,7 @@ namespace CalculadoraMadeInChina
                 int option = UserInterface.ReadMenuOption();
                 if (option == 0)
                 {
+                    System.Console.Clear();
                     return;    
                 }
                 else if (option == 2)
@@ -74,7 +79,8 @@ namespace CalculadoraMadeInChina
                 }
                 else if (option == 1)
                 {
-                   int submenu_option = ManageAddSubmenu(result);
+                    System.Console.Clear();
+                    int submenu_option = ManageAddSubmenu(result);
                     if (submenu_option == 0)
                         return;
 
@@ -98,6 +104,7 @@ namespace CalculadoraMadeInChina
                 int option = UserInterface.ReadMenuOption();
                 if (option == 0)
                 {
+                    System.Console.Clear();
                     return;
                 }
                 else if (option == 2)
@@ -106,6 +113,7 @@ namespace CalculadoraMadeInChina
                 }
                 else if (option == 1)
                 {
+                    System.Console.Clear();
                     int submenu_option = ManageSubSubmenu(result);
                     if (submenu_option == 0)
                         return;
@@ -137,9 +145,11 @@ namespace CalculadoraMadeInChina
                         System.Console.WriteLine(" Opción no valida");
                         break;
                     case 1:
+                        System.Console.Clear();
                         ManageAddMenu();
                             break;
                     case 2:
+                        System.Console.Clear();
                         ManageSubMenu();
                         break;
                     case 3:

@@ -18,7 +18,6 @@
                     System.Console.WriteLine("Número no válido");
                 }
             }
-
             
         }
     }

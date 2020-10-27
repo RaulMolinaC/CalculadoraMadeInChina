@@ -80,7 +80,7 @@
                 if (option >= MinMenuOption && option <= MaxMenuOption) 
                    return option;
                 else
-                    System.Console.WriteLine("Opción duera de rango ");
+                    System.Console.WriteLine("Opción fuera de rango ");
             }   
     
         }
