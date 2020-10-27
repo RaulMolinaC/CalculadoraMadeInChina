@@ -55,6 +55,31 @@ namespace CalculadoraMadeInChina
 
         }
 
+        public static int ManageMultSubmenu(int Accumuled)
+        {
+            while (true)
+            {
+                UserInterface.PrintMultHeader();
+                System.Console.WriteLine("Llevas acumulado: " + Accumuled);
+                int number = ManageUtils.ReadInteger("Introduce otro número: ");
+                Accumuled *= number;
+                System.Console.WriteLine("Llevas acumulado: " + Accumuled);
+                UserInterface.PrintMultSubmenu();
+                int option = UserInterface.ReadMenuOption(0, 2);
+                switch (option)
+                {
+                    case 0:
+                        System.Console.Clear();
+                        return 0;
+                    case 2:
+                        System.Console.Clear();
+                        return 2;
+
+                }
+            }
+
+        }
+
 
         public static void ManageAddMenu()
         {
@@ -120,12 +145,43 @@ namespace CalculadoraMadeInChina
 
                 }
 
-
-
             }
 
         }
 
+        public static void ManageMultMenu()
+        {
+
+            while (true)
+            {
+                UserInterface.PrintMultHeader();
+                int number1 = ManageUtils.ReadInteger("Introduzca el primer númro: ");
+                int number2 = ManageUtils.ReadInteger("Introduzca el segundo númro: ");
+                int result = number1 * number2;
+                System.Console.WriteLine("El resultado es: " + result);
+                UserInterface.PrintMultSubmenu();
+                int option = UserInterface.ReadMenuOption();
+                if (option == 0)
+                {
+                    System.Console.Clear();
+                    return;
+                }
+                else if (option == 2)
+                {
+                    System.Console.Clear();
+                }
+                else if (option == 1)
+                {
+                    System.Console.Clear();
+                    int submenu_option = ManageMultSubmenu(result);
+                    if (submenu_option == 0)
+                        return;
+
+                }
+
+            }
+
+        }
 
         public static void ManageMainMenu()
                 
@@ -153,6 +209,9 @@ namespace CalculadoraMadeInChina
                         ManageSubMenu();
                         break;
                     case 3:
+                        System.Console.Clear();
+                        ManageMultMenu();
+                            break;
                     case 4:
                     case 5:
                     case 6:

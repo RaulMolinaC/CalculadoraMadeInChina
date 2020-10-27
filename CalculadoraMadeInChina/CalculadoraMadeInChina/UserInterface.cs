@@ -19,16 +19,22 @@
         }
      
         public static void PrintAddHeader()
-         {
+        {
             System.Console.WriteLine(" Suma de números ");
 
-         }
+        }
 
-         public static void PrintSubHeader()
-          {
-            System.Console.WriteLine(" Resta de números ");
+        public static void PrintSubHeader()
+        {
+           System.Console.WriteLine(" Resta de números ");
 
-          }
+        }
+
+        public static void PrintMultHeader()
+        {
+            System.Console.WriteLine(" Multiplicación de números ");
+
+        }
 
         public static void PrintAddSubmenu()
         {
@@ -42,6 +48,13 @@
             System.Console.WriteLine("0) Salir al menú principal");
             System.Console.WriteLine("1) Restar otro número");
             System.Console.WriteLine("2) Comenzar nueva resta");
+        }
+
+        public static void PrintMultSubmenu()
+        {
+            System.Console.WriteLine("0) Salir al menú principal");
+            System.Console.WriteLine("1) Multiplicar otro número");
+            System.Console.WriteLine("2) Comenzar nueva multiplicación");
         }
 
         public static int ReadMenuOption()
