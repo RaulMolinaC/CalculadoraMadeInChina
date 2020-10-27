@@ -1,9 +1,5 @@
 ﻿    class UserInterface
-    {
-
-        
-
-
+    { 
         public static void PrintMainMenu()
         {
             System.Console.BackgroundColor = System.ConsoleColor.DarkBlue;
